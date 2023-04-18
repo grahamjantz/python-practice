@@ -1,5 +1,7 @@
 import sys
 
+# 89 187 78 65 62 150 31 249 250 28
+
 cli_arguments = sys.argv
 
 total_books_list = []
@@ -21,7 +23,6 @@ else:
         total_books_list.append(tmp_list)
 
 
-# 89 187 78 65 62 150 31 249 250 28
 
 for item in total_books_list:
     book = []
