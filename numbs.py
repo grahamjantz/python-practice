@@ -32,7 +32,6 @@ for item in total_books_list:
         
 print("Thank you, calculating how long your reading cycle will be!")
 
-master_list = []
 complete = False
 # index = 0 + 1000000000
 # day = 1 + 1000000000
@@ -65,36 +64,15 @@ while complete == False:
     for i in total_books_list:
         add_to_temp(i[1])
 
-    # master_list.append(temp_list)
-    
-    if day % 100000 == 0 and day != 0:
+    if day % 251 == 0 and day != 0:
         print(day, temp_list)
 
     if temp_list == key and index > 0:
         complete = True
+        print(temp_list)
         print('Cycle will complete on day:', str(day))
-    
-    if day == 2000000000:
-        complete = True
-        print('Cycled through 2,000,000,000 days. Did not find end')
-    elif day == 3000000000:
-        complete = True
-        print('Cycled through 3,000,000,000 days. Did not find end')
-    elif day == 4000000000:
-        complete = True
-        print('Cycled through 4,000,000,000 days. Did not find end')
-
-        
-    
-
-    index += 1
-    day += 1
-
-
-# master_index = 1
-# for item in master_list:
-#     if item == key and master_index > 1:
-#         print('Cycle will complete on day', master_index)
-#         years = round((master_index/365), 2)
-#         print('This will take:', years, 'years to complete. Good luck!')
-#     master_index += 1
+        years = round((day/365), 2)
+        print('This will take:', years, 'years to complete. Good luck!')
+ 
+    index += 11640750
+    day += 11640750
