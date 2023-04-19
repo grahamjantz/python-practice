@@ -67,7 +67,7 @@ while complete == False:
     for i in total_books_list:
         add_to_temp(i[1])
 
-    if day % 251 == 0 and day != 0:
+    if day % 10000 == 0 and day != 0:
         print(day, temp_list)
 
     if temp_list == key and index > 0:
@@ -77,9 +77,9 @@ while complete == False:
         years = round((day/365), 2)
         print('This will take:', years, 'years to complete. Good luck!')
  
-    index += mean_increment_amount
-    day += mean_increment_amount
+    index += 1
+    day += 1
 
 end = time.time()
 
-print("Time to execute:", (end-start), "seconds")
+print("Time to execute:", round((end-start), 2) , "seconds")
