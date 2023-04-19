@@ -22,6 +22,14 @@ else:
         tmp_list.append(length)
         total_books_list.append(tmp_list)
 
+mean_increment_amount = 1
+
+total_books_list.sort()
+
+
+if len(total_books_list) > 3:
+    for i in total_books_list[-3:]:
+        mean_increment_amount *= i[0]
 
 
 for item in total_books_list:
@@ -34,18 +42,9 @@ for item in total_books_list:
 print("Thank you, calculating how long your reading cycle will be!")
 
 complete = False
-# index = 0 + 1000000000
-# day = 1 + 1000000000
 index = 0 
 day = 1
 key = []
-
-# 1500000 [83, 73, 60, 60, 34, 150, 30, 24, 250, 12]
-# 1500000 [83, 73, 60, 60, 34, 150, 30, 24, 250, 12]
-
-# numbs.py ran on my phone for this many cycles with no match. tested running program starting at 100,000 less than this value and it produced the same temp_list value so it works to add to the index and day values to 'skip' ahead in the program running to get closer to the answer see down VVVV
-# 896600000 [27, 76, 62, 10, 20, 50, 20, 53, 250, 16]
-# 896600000 [27, 76, 62, 10, 20, 50, 20, 53, 250, 16]
 
 for i in total_books_list:
     key.append(1)
@@ -75,5 +74,5 @@ while complete == False:
         years = round((day/365), 2)
         print('This will take:', years, 'years to complete. Good luck!')
  
-    index += 11640750
-    day += 11640750
+    index += mean_increment_amount
+    day += mean_increment_amount
