@@ -1,4 +1,7 @@
 import sys
+import time
+
+start = time.time()
 
 # 89 187 78 65 62 150 31 249 250 28
 
@@ -76,3 +79,7 @@ while complete == False:
  
     index += mean_increment_amount
     day += mean_increment_amount
+
+end = time.time()
+
+print("Time to execute:", (end-start), "seconds")
