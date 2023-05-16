@@ -67,12 +67,12 @@ while complete == False:
     for i in total_books_list:
         add_to_temp(i[1])
 
-    if day % 251== 0 and day != 0:
+    if day % (total_books_list[-1][0] + 1) == 0 and day != 0:
         print(day, temp_list)
 
     if temp_list == key and index > 0:
         complete = True
-        print(temp_list)
+        print("\n", day, temp_list)
         print('Cycle will complete on day:', str(day))
         years = round((day/365), 2)
         print('This will take:', years, 'years to complete. Good luck!')
