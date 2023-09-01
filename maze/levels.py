@@ -1,7 +1,7 @@
 global_char_x_pos = 1
 global_char_y_pos = 0
 
-PATH = '░'
+PATH = ' '
 
 back = '█'
 wall = '#'

@@ -4,7 +4,7 @@ print("Welcome to the Maze!\n")
 print('Your goal is to get your character: X to the exit: O without touching any of the walls: #\n')
 print('Good luck!\n')
 
-PATH = '░'
+PATH = ' '
 wall = '#'
 char = 'X'
 end = 'O'
