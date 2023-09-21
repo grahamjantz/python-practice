@@ -2,7 +2,10 @@ import random
 
 n = int(input("Hello, please enter length of array: "))
 print("\nYou can either input your own array to be rotated or this can randomly generate one for you!")
-rand_arr = input("\nWould you like to input your own array? (Y/N): ")
+rand_arr = ''
+
+while rand_arr.lower() != 'y'  and rand_arr.lower() != 'n':
+    rand_arr = input("\nWould you like to input your own array? (Y/N): ")
 
 if (rand_arr.lower() == 'y'):
     rand_arr = False
@@ -33,10 +36,12 @@ else:
     for i in range(0, n):
         tempArr = []
         for j in range(0, n):
-            a = int(input("Input array number:"))
+            a = int(input("Input array value: "))
             tempArr.append(a)
-            print(tempArr)
+            # print(tempArr)
         arr.append(tempArr)
+        for a in range(len(arr)):
+            print("Your array so far:", arr[a])
     
 
 print("\nYour array before: ")
