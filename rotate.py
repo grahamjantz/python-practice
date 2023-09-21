@@ -23,7 +23,7 @@ if rand_arr == True:
         for i in range(length): 
             tempArr = []
             for i in range(length):
-                tempArr.append(random.randint(0, length - 1))
+                tempArr.append(random.randint(0, 9))
             gen_arr.append(tempArr)
 
         return gen_arr
